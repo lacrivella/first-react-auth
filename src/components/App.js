@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAuth0 } from '../Auth0Provider';
+import AllDogs from '../containers/AllDogs';
 
 export default function App() {
   const { isAuthenticated, user, loading, auth0Client } = useAuth0();
@@ -10,6 +11,7 @@ export default function App() {
     <>
       {!isAuthenticated && <button onClick={login}>Login!</button>}
       {isAuthenticated && <button onClick={logout}>Logout</button>}
+      <AllDogs />
     </>
   );
 }
