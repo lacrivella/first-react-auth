@@ -7,8 +7,8 @@ function Dog({ dog }) {
   return (
     <>
       <h2>{dog.name}</h2>
-      <p>Owner - {isAuthenticated && !loading ? user.nickname : 'unknown'}</p>
-      <p>{dog.breed}</p>
+      <p>owner: {isAuthenticated && !loading ? user.nickname : 'unknown'}</p>
+      <p>breed: {dog.breed}</p>
     </>
   );
 }
